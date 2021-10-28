@@ -1,43 +1,3 @@
-# Простой бот для пересылки сообщений из Вконтакте в Телеграм  на пайтоне #
-
-## Установка всех библиотек ##
-
-[Для работы с вк :](https://pypi.org/project/vk-api/)
-```
-pip install vk-api
-```
-[Для работы с телеграмом :](https://pypi.org/project/pyTelegramBotAPI/)
-```
-pip install pyTelegramBotAPI
-```
-
-
-## В файле config вписываем токены и свои id ##
-
-Удобнее всего токен можно получить здесь : https://vkhost.github.io/ , </br>
-для работы необходимо будет в настройках выбрать пользователя и разрешить сообщения, id же вставляем от свой и вставляем именно в виде числа, без кавычек
-```
-vk_token = '...'
-my_vk_id = 999999999
-```
-
-Далее создаём в телеграме бота через [BotFather](https://telegram.im/BotFather), </br>
-указываем полученый токен и свой id без кавычек
-
-```
-tg_token = '...'
-my_tg_id = 9999999999
-```
-
-Всё, теперь запускаем просто бота
-
-## Весь код ##
-
-
-
-
-```python
-
 from vk_api import *
 from vk_api.utils import get_random_id
 from vk_api.longpoll import VkLongPoll, VkEventType
@@ -82,4 +42,6 @@ while True:
         time.sleep(5)
         print('Error ' + time.asctime())
 
-```
+
+
+
